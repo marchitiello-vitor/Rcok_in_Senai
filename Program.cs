@@ -6,12 +6,12 @@ namespace logica
     class Program
     {
         static string respSim;
+        static List<string> nomes = new List<string>();
         static void Main(string[] args)
 
         {
 
-            List<string> nomes = new List<string>();
-                Console.WriteLine("Bem vindo ao show Rock in SENAI!");
+            Console.WriteLine("Bem vindo ao show Rock in SENAI!");
             do
             {
                 Console.WriteLine("Qual é o seu nome, estrela do rock?");
@@ -64,21 +64,31 @@ namespace logica
 
             Console.WriteLine($"deseja rever a lista dos participantes? sim/nao");
             string participantes = Console.ReadLine();
-            
-            if ( participantes == "sim")
+
+            if (participantes == "sim")
             {
-                foreach (var cadaNome in nomes)
-                {
-                    Console.WriteLine($"{cadaNome}");
-                }
+                ListarParticipantes();
+            }
+
+            Console.WriteLine($"obrigado!!");
+
+            if (true)
+            {
+
             }
             else
             {
 
             }
+        }
 
-            Console.WriteLine($"obrigado!!");
-            
+        static void ListarParticipantes()
+        {
+
+            foreach (var cadaNome in nomes)
+            {
+                Console.WriteLine($"{cadaNome}");
+            }
 
         }
     }
